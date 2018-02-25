@@ -1,0 +1,120 @@
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:q="http://qmatic.com"
+        id="http://qmatic.com/widgets/aramexstatus"
+        version="2.3"
+        width="500"
+        height="300">
+
+    <name>Aramex Shipment Search Widget</name>
+    <name xml:lang="sv">Aramex Shipment Search Widget</name>
+    <name xml:lang="en">Aramex Shipment Search Widget</name>
+
+    <description>
+        Touchscreen widget for searching for shipments/parcels with new services
+    </description>
+
+    <!-- Tell wookie to include resources from orchestra-widget feature. This feature allows us to get events from Orchestra and communicate with other widgets and receive q:attribute data -->
+    <!-- This feature must be first in the list of features -->
+    <feature name="http://qmatic.com/features/touchprinter-widget" required="true"/>
+    <feature name="http://qmatic.com/features/orchestra-connector" required="true"/>
+
+
+    <content src="index.html"/>
+    <icon src="images/icon.png"/>
+    <author>Vibin Valsalan</author>
+    <licence>Copyright (c) Qmatic</licence>
+
+    <q:standalone>false</q:standalone>
+
+    <q:attribute type="service" key="snsService1"                 name="snsService1"                    description="snsService1.description"></q:attribute>
+    <q:attribute type="service" key="snsService2"                 name="snsService2"                    description="snsService2.description"></q:attribute>
+
+    <q:attribute type="string"  key="timeoutPage"                 name="timeoutPage"                    description="timeoutPage.description"></q:attribute>
+    <q:attribute type="string"  key="printingPage"                name="printingPage"                   description="printingPage.description"></q:attribute>
+    <q:attribute type="string"  key="notFoundPage"                name="notFoundPage"                   description="notFoundPage.description"></q:attribute>
+    <q:attribute type="string"  key="errorPage"                   name="errorPage"                      description="errorPage.description"></q:attribute>
+
+    <q:attribute type="integer" key="timeout"                     name="timeout"                        description="timeout.description"></q:attribute>
+    <q:attribute type="integer" key="wsTimeout"                   name="wsTimeout"                      description="wsTimeout.description"></q:attribute>
+    <q:attribute type="string"  key="warehouseZero"               name="warehouseZero"                  description="warehouseZero.description"></q:attribute>
+
+
+    <q:attribute type="string"  key="textMethodHeader"            name="textMethodHeader"               description="textMethodHeader.description"></q:attribute>
+    <q:attribute type="string"  key="textMethodDescription"       name="textMethodDescription"          description="textMethodDescription.description"></q:attribute>
+
+    <q:attribute type="string"  key="textSearchHeader"            name="textSearchHeader"               description="textSearchHeader.description"></q:attribute>
+    <q:attribute type="string"  key="helpShipment"				  name="helpShipment"               	description="helpShipment.description"></q:attribute>
+	<q:attribute type="string"  key="helpMobile"            	  name="helpMobile"               		description="helpMobile.description"></q:attribute>
+	<q:attribute type="string"  key="helpMailbox"            	  name="helpMailbox"               		description="helpMailbox.description"></q:attribute>
+	
+    <q:attribute type="string"  key="textSelectHeader"            name="textSelectHeader"               description="textSelectHeader.description"></q:attribute>
+    <q:attribute type="string"  key="textSelectDescription"       name="textSelectDescription"          description="textSelectDescription.description"></q:attribute>
+	
+	
+    <q:attribute type="string"  key="textButtonShipmentNumber"    name="textButtonShipmentNumber"       description="textButtonShipmentNumber.description"></q:attribute>
+    <q:attribute type="string"  key="textButtonMobile"            name="textButtonMobile"               description="textButtonMobile.description"></q:attribute>
+    <q:attribute type="string"  key="textButtonMailbox"           name="textButtonMailbox"              description="textButtonMailbox.description"></q:attribute>
+
+    <q:attribute type="string"  key="textButtonSearch"            name="textButtonSearch"               description="textButtonSearch.description"></q:attribute>
+    <q:attribute type="string"  key="textButtonPrint"             name="textButtonPrint"                description="textButtonPrint.description"></q:attribute>
+
+    <q:attribute type="string"  key="textInputClear"              name="textInputClear"                 description="textInputClear.description"></q:attribute>
+
+    <q:attribute type="string"  key="countryCodes"                name="countryCodes"                   description="countryCodes.description"></q:attribute>
+
+    <q:attribute type="integer" key="maxMobileNumberLength"       name="maxMobileNumberLength"          description="maxMobileNumberLength.description"></q:attribute>
+    <q:attribute type="integer" key="minMobileNumberLength"       name="minMobileNumberLength"          description="minMobileNumberLength.description"></q:attribute>
+
+    <q:attribute type="integer" key="maxMailboxNumberLength"      name="maxMailboxNumberLength"         description="maxMailboxNumberLength.description"></q:attribute>
+    <q:attribute type="integer" key="minMailboxNumberLength"      name="minMailboxNumberLength"         description="minMailboxNumberLength.description"></q:attribute>
+
+	<q:attribute type="integer" key="maxShipmentNumberLength"      name="maxShipmentNumberLength"         description="maxShipmentNumberLength.description"></q:attribute>
+    <q:attribute type="integer" key="minShipmentNumberLength"      name="minShipmentNumberLength"         description="minShipmentNumberLength.description"></q:attribute>
+
+
+
+    <q:attribute type="color"   key="css.backgroundColor"                     name="css.backgroundColor"                  description="css.backgroundColor.description"                   defaultValue="#ffffff"></q:attribute>
+    <q:attribute type="color"   key="css.color"                               name="css.color"                            description="css.color.description"                             defaultValue="#000000"></q:attribute>
+    <q:attribute type="font"    key="css.headerFont"                          name="css.headerFont"                       description="css.headerFont.description"                        defaultValue="Helvetica;30px;normal;normal"></q:attribute>
+    <q:attribute type="font"    key="css.descriptionFont"                     name="css.descriptionFont"                  description="css.descriptionFont.description"                   defaultValue="Helvetica;30px;normal;normal"></q:attribute>
+
+
+    <q:attribute type="color"   key="css.button.backgroundColor"              name="css.button.backgroundColor"           description="css.button.backgroundColor.description"            defaultValue="#42B8DD"></q:attribute>
+    <q:attribute type="image"   key="css.button.backgroundImage"              name="css.button.backgroundImage"           description="css.button.backgroundImage.description"            defaultValue=""></q:attribute>
+    <q:attribute type="color"   key="css.button.color"                        name="css.button.color"                     description="css.button.color.description"                      defaultValue="#ffffff"></q:attribute>
+    <q:attribute type="string"  key="css.button.align"                        name="css.button.align"                     description="css.button.align.description"                      defaultValue="center"></q:attribute>
+    <q:attribute type="integer" key="css.button.width"                        name="css.button.width"                     description="css.button.width.description"                      defaultValue="400"></q:attribute>
+    <q:attribute type="integer" key="css.button.height"                       name="css.button.height"                    description="css.button.height.description"                     defaultValue="50"></q:attribute>
+    <q:attribute type="font"    key="css.button.font"                         name="css.button.font"                      description="css.button.font.description"                       defaultValue="Helvetica;30px;normal;normal"></q:attribute>
+    <q:attribute type="integer" key="css.button.lineHeight"                   name="css.button.lineHeight"                description="css.button.lineHeight.description"                 defaultValue="60"></q:attribute>
+
+
+    <q:attribute type="image"   key="css.button.disabled.backgroundImage"     name="css.button.disabled.backgroundImage"  description="css.button.disabled.backgroundImage.description"   defaultValue=""></q:attribute>
+    <q:attribute type="color"   key="css.button.disabled.backgroundColor"     name="css.button.disabled.backgroundColor"  description="css.button.disabled.backgroundColor.description"   defaultValue="#c0c0c0"></q:attribute>
+    <q:attribute type="color"   key="css.button.disabled.color"               name="css.button.disabled.color"            description="css.button.disabled.color.description"             defaultValue="#ffffff"></q:attribute>
+
+
+    <q:attribute type="color"   key="css.keyboard.key.backgroundColor"        name="css.keyboard.key.backgroundColor"     description="css.keyboard.key.backgroundColor.description"      defaultValue="#42B8DD"></q:attribute>
+    <q:attribute type="color"   key="css.keyboard.key.color"                  name="css.keyboard.key.color"               description="css.keyboard.key.color.description"                defaultValue="#ffffff"></q:attribute>
+    <q:attribute type="font"    key="css.keyboard.key.font"                   name="css.keyboard.key.font"                description="css.keyboard.key.font.description"                 defaultValue="Helvetica;30px;normal;normal"></q:attribute>
+    <q:attribute type="integer" key="css.keyboard.key.lineHeight"             name="css.keyboard.key.lineHeight"          description="css.keyboard.key.lineHeight.description"           defaultValue="60"></q:attribute>
+
+    <q:attribute type="string"  key="mailbox.prefix"                          name="mailbox.prefix"                     description="mailbox.prefix.description"                      	  defaultValue=""></q:attribute>
+
+	<!-- Added New Details -->
+	<q:attribute type="string"  key="textStatusAHeader"     name="textStatusAHeader"	description="textStatusAHeader.description"></q:attribute>
+	<q:attribute type="string"  key="textStatusADesc"     	name="textStatusADesc"      description="textStatusADesc.description"></q:attribute>
+	<q:attribute type="string"  key="textButtonUpdate1"     name="textButtonUpdate1"	description="textButtonUpdate1.description"></q:attribute>
+	<q:attribute type="string"  key="textButtonUpdate2"     name="textButtonUpdate2"	description="textButtonUpdate2.description"></q:attribute>
+	<q:attribute type="string"  key="textButtonUpdate3"     name="textButtonUpdate3"	description="textButtonUpdate3.description"></q:attribute>
+	
+	
+	
+    <!--
+    <q:attribute type="string"  key="stringSearch"     name="stringSearch"      description="stringSearch.description"></q:attribute>
+    <q:attribute type="string"  key="stringSearch"     name="stringSearch"      description="stringSearch.description"></q:attribute>
+    <q:attribute type="string"  key="stringSearch"     name="stringSearch"      description="stringSearch.description"></q:attribute>
+    <q:attribute type="string"  key="stringPrint"      name="stringPrint"       description="stringPrint.description"></q:attribute>
+    -->
+
+
+</widget>

@@ -1,0 +1,246 @@
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><link rel="stylesheet" type="text/css" href="css/style.css" /><link rel="stylesheet" type="text/css" href="css/input.css" /><link rel="stylesheet" type="text/css" href="css/keyboard.css" /><script type="text/javascript" src="/wookie/dwr/util.js"></script><script type="text/javascript" src="/wookie/dwr/engine.js"></script><script type="text/javascript" src="/wookie/dwr/interface/WidgetImpl.js"></script><script type="text/javascript" src="/wookie/shared/js/wookie-wrapper.js"></script><script type="text/javascript" src="/wookie/features/touchprinter-widget/OpenAjaxManagedHub-all.js"></script><script type="text/javascript" src="/wookie/features/touchprinter-widget/widget-client.js"></script><script type="text/javascript" src="/wookie/features/orchestra-connector/rest-api.js"></script><script type="text/javascript" src="/wookie/features/orchestra-connector/connector-client.js"></script><script src="js/jquery-1.10.2.min.js"></script><script src="js/controller.js"></script><script src="js/AramexService.js"></script><script src="js/Keyboard.js"></script><script src="js/Input.js"></script><script src="js/ParcelList.js"></script><script src="js/Aramex.js"></script><script src="js/Online.js"></script><script src="js/controller.js"></script></head><body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        $(function() {
+            qmatic.webwidget.client.setOnLoaded(controller.onLoaded);
+
+        });
+    </script>
+    <div id="header">
+        <div id="pageTitle"></div>
+  <div id="pageHelp"></div>
+        <div id="pageDescription"></div>
+    </div>
+    <div id="page0" class="page" style="display: none">
+        <div class="keyRow">
+            <div id="btnMethodAWB" class="button"></div>
+        </div>
+        <div class="keyRow">
+            <div id="btnMethodMobile" class="button"></div>
+        </div>
+        <!-- <div class="keyRow"> -->
+            <!-- <div id="btnMethodMailbox" class="button"></div> -->
+        <!-- </div> -->
+    </div>
+    <!-- Screen with keyboard and text input -->
+ <div id="page1" class="page" style="display: none">
+        <div>
+            <select id="countryCode"></select>
+   <span id="mailboxPrefix">DXB</span>
+            <input type="text" id="textInput" />
+            <div id="keyboard" class="alphaNumeric">
+                <div class="keyRow row1">              
+         
+  
+  
+ 
+  
+  
+  
+  
+ 
+ 
+ 
+  
+  
+  
+  
+ 
+ 
+ 
+  
+  
+  
+  
+ 
+ 
+ 
+  
+  
+  
+  
+  
+ 
+ 
+ <table class="keyTable"><tbody><tr><td data-key="7">
+   <div class="span4">
+                <div class="num">
+                    <div class="txt">7</div>
+                </div>
+            </div>
+  </td><td data-key="8">
+   <div class="span4">
+    <div class="num">
+     <div class="txt">8<!-- <span class="small"><p>ABC</p></span> --></div>
+    </div>
+   </div>
+  </td><td data-key="9">
+   <div class="span4">
+                <div class="num">
+                    <div class="txt">9</div>
+                </div>
+            </div>
+  </td><td data-key="bs">
+   <div id="btnHome" class="span5">
+                <div class="num">
+                    <div class="txtLetters">HOME PAGE</div>
+                </div>
+            </div>
+  </td></tr><tr></tr><tr><td data-key="4">
+   <div class="span4">
+                <div class="num">
+                    <div class="txt">4</div>
+                </div>
+            </div>
+  </td><td data-key="5">
+   <div class="span4">
+                <div class="num">
+                    <div class="txt">5</div>
+                </div>
+            </div>
+  </td><td data-key="6">
+   <div class="span4">
+                <div class="num">
+                    <div class="txt">6</div>
+                </div>
+            </div>
+  </td><td data-key="bs"><!--Changed as per request 14/09/2017-->
+   <div class="span5">
+                <div class="num">
+                    <div class="txtLetters">&lt;&lt;</div>
+                </div>
+            </div>
+  </td></tr><tr></tr><tr><td data-key="1">
+   <div class="span4">
+                <div class="num">
+                    <div class="txt">1</div>
+                </div>
+            </div>
+  </td><td data-key="2">
+   <div class="span4">
+                <div class="num">
+                    <div class="txt">2</div>
+                </div>
+            </div>
+  </td><td data-key="3">
+   <div class="span4">
+                <div class="num">
+                    <div class="txt">3</div>
+                </div>
+            </div>
+  </td><td data-key="">
+   <div id="btnSearch1" class="span5 disabled">
+                <div class="num">
+                    <div class="txtLetters">ENTER</div>
+     <!-- <div class="keyRow"> -->
+            <!-- <span id="" class="button disabled"></span> -->
+        <!-- </div> -->
+                </div>
+            </div>
+  </td></tr><tr></tr><tr><td data-key="bs">
+   <!-- <div class="span4"> -->
+                <!-- <div class="num"> -->
+                    <!-- <div class="txt">&lt;&lt;</div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+  </td><td data-key="0">
+   <div class="span4">
+                <div class="num">
+                    <div class="txt">0</div>
+                </div>
+            </div>
+  </td><td data-key="clr">
+   <!-- <div class="span4"> -->
+                <!-- <div class="num"> -->
+                    <!-- <div class="txt">CLR</div> -->
+                <!-- </div> -->
+   <!-- </div> -->
+  </td><td id="modeToggler" class="key" data-key="mode">ABC</td></tr></tbody></table>
+    </div>
+                <div class="keyRow row2">
+                    <div class="key" data-key="q">q</div>
+                    <div class="key" data-key="w">w</div>
+                    <div class="key" data-key="e">e</div>
+                    <div class="key" data-key="r">r</div>
+                    <div class="key" data-key="t">t</div>
+                    <div class="key" data-key="y">y</div>
+                    <div class="key" data-key="u">u</div>
+                    <div class="key" data-key="i">i</div>
+                    <div class="key" data-key="o">o</div>
+                    <div class="key" data-key="p">p</div>
+                </div>
+
+                <div class="keyRow row3">
+                    <div class="key" data-key="a">a</div>
+                    <div class="key" data-key="s">s</div>
+                    <div class="key" data-key="d">d</div>
+                    <div class="key" data-key="f">f</div>
+                    <div class="key" data-key="g">g</div>
+                    <div class="key" data-key="h">h</div>
+                    <div class="key" data-key="j">j</div>
+                    <div class="key" data-key="k">k</div>
+                    <div class="key" data-key="l">l</div>
+                </div>
+
+                <div class="keyRow row4">
+                    <div id="shift" class="key" data-key="shift">Shift</div>
+
+                    <div class="key" data-key="z">z</div>
+                    <div class="key" data-key="x">x</div>
+                    <div class="key" data-key="c">c</div>
+                    <div class="key" data-key="v">v</div>
+                    <div class="key" data-key="b">b</div>
+                    <div class="key" data-key="n">n</div>
+                    <div class="key" data-key="m">m</div>
+                </div>
+                <div class="keyRow row5">
+                    <div class="key" data-key=" "></div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="keyRow"> -->
+            <!-- <span id="btnSearch" class="button disabled"></span> -->
+        <!-- </div> -->
+    </div>
+
+    <!-- Screen for selecting parcels -->
+    <div id="page2" class="page" style="display: none">
+        <div id="parcelList"></div>
+        <div id="btnPrint" class="button"></div>
+    </div>
+ <!-- Screen for selecting customer option for updating to Aramex-->
+ <div id="page3" class="page" style="display: none">
+        <!-- <div id="parcelList"></div> -->
+  <div class="keyRow">
+   <div id="btnUpdate1" class="button"></div>
+  </div>
+  <div class="keyRow">
+   <div id="btnUpdate2" class="button"></div>
+        </div>
+  <div class="keyRow">
+   <div id="btnUpdate3" class="button"></div>
+  </div>
+    </div>
+    <!-- Common div for error messages -->
+    <div id="message"></div>
+
+    <div id="progress" style="display: none">
+        <img src="images/progress.gif" />
+    </div>
+
+</body></html>

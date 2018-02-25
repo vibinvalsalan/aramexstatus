@@ -1,0 +1,169 @@
+.key {
+
+    font-family: arial, sans-serif;
+    display: inline-block;
+    height: 50px;
+    min-width: 100px;
+    line-height: 60px;
+    font-size: 30px;
+
+    border: 1px solid #c0c0c0;
+
+    text-align: center;
+
+    background: rgb(66, 184, 221);
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	padding: 5px 5px;
+
+}
+
+.keyRow {
+    margin-top: 5px;
+}
+
+.keyTable{	
+	margin-left: 35%;
+	border-spacing: 5px;
+	border-collapse: separate;	
+}
+
+.keyTable td{
+	padding: 5px;
+	padding-left: 10px;
+	  /* border: 1px solid #c0c0c0; */
+	  border-spacing: 5px;
+}
+.keyTable th{
+	padding: 5px;
+	border: 1px solid #c0c0c0;
+	border-spacing: 5px;
+}
+
+
+.row1 {}
+
+.row2 {
+
+    display: none;
+}
+
+.row3 {
+    display: none;
+}
+
+.row4 {
+    display: none;
+}
+
+.row5 {
+    display: none;
+}
+
+.alpha .row2  {
+    display: block;
+}
+
+.alpha .row3  {
+    display: block;
+}
+
+.alpha .row4  {
+    display: block;
+}
+
+.alpha .row5 {
+    display: block;
+}
+
+.row5 .key {
+    width: 600px;
+}
+
+.shifted #shift {
+    background: #9aff75;
+}
+
+[data-key="clr"] {
+    width: 100px;
+}
+
+[data-key="mode"] {
+    width: 100px;
+}
+
+[data-key="shift"] {
+    width: 100px;
+}
+
+#modeToggler{
+    display: none;
+	width: 0px;
+}
+
+.alphaNumeric #modeToggler {
+    display: inline-block;
+	width: 100px;
+}
+
+
+.alpha [data-key="mode"]{
+    background: #9aff75;
+}
+
+.row2 .key, .row3 .key, .row4 .key {
+    width: 85px;
+}
+
+#dummyKey{
+	display: none;
+	width:0px;
+}
+
+#textInput {
+    width: 900px;
+    height: 60px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+}
+
+#countryCode {
+    outline: 0;
+    border: 0px;
+    width: 100px;
+    padding: 0px;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1;
+    height: 50px;
+    -webkit-appearance: none;
+}
+#mailboxPrefix {
+    outline: 0;
+    border: 0px;
+    width: 100px;
+    padding: 0px;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1;
+    height: 50px;
+    -webkit-appearance: none;
+}
+
+.inputType1{
+    text-align: center;
+}
+.inputType2{
+    text-align: center;
+}
+.inputType3{
+    text-align: left;
+}
+
+.validation1 { background: #00ff00;}  /*lime*/
+.validation2 { background: #ffffff;} /*white*/
+.validation3 {background: #ffffcc;} /*cream*/
+.validation4, .validation5, .validation6{ background: #ff0000;}  /*red*/
